@@ -9,7 +9,7 @@ class Navbar extends Component {
     // const { isLightTheme, light, dark } = this.context;
     // const theme = isLightTheme ? light : dark;
     return ( 
-      <AuthContext>
+      <AuthContext.Consumer>
         {((authContext) => (
           <ThemeContext.Consumer>
             {((themeContext) =>{
@@ -32,7 +32,7 @@ class Navbar extends Component {
             })}
           </ThemeContext.Consumer>
         ))}
-      </AuthContext>
+      </AuthContext.Consumer>
     );
   }
 }
